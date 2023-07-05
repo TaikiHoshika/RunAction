@@ -12,5 +12,7 @@ jobs:
             pull-requests: write
 
         steps:
-          - name: SendTestActionByTaiki
+          - name: send-test-to-pull-request
             uses: TaikiHoshika/ActionTest@v1
+            with:
+                github-token: ${{ secrets.GITHUB_TOKEN }}
