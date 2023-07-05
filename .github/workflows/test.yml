@@ -1,0 +1,16 @@
+name: TestAction
+
+on:
+    pull_request:
+        types: [opened, reopened]
+
+jobs:
+    TestJob:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            pull-requests: write
+
+        steps:
+          - name: SendTestActionByTaiki
+            uses: TaikiHoshika/ActionTest@v1
